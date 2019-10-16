@@ -3,13 +3,14 @@ import Routes from './routes';
 
 import './styles.css';
 
-import Header from './components/Header'
-import Main from './pages/main';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => (
   <div className="App">
     <Header />
     <Routes />
+    <Footer />
   </div>
 );
 

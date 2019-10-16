@@ -24,7 +24,7 @@ export default class Main extends Component {
     };
 
     prevPage = () => {
-        const { page, productInfo } = this.state;
+        const { page } = this.state;
 
         if(page === 1) return;
 
@@ -47,18 +47,28 @@ export default class Main extends Component {
         const { products,page, productInfo } = this.state;
 
         return (
-            <div className="product-list">
-                {products.map(product => (
-                    <article key={product._id}>
-                        <strong>{product.title}</strong>
-                        <p>{product.description}</p>
-
-                        <Link to={`/products/${product._id}`}>Acessar</Link>
-                    </article>
-                ))}
-                <div className="actions">
-                    <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                    <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próxima</button>
+            <div className="bg-light page-section" id="portfolio">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 text-center">
+                        <h2 className="section-heading text-uppercase">Produtos</h2>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {products.map(product => (
+                            <div className="col-md-4 col-sm-6 portfolio-item"  key={product._id}>
+                                <Link to={`/products/${product._id}`} className="portfolio-link"><img className="img-fluid" src={product.imgUrl} alt="img"/></Link>
+                                <div className="portfolio-caption">
+                                    <h4>{product.name}</h4>
+                                    <p className="text-muted">{product.price}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="actions">
+                        <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+                        <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+                    </div>
                 </div>
             </div>
         )

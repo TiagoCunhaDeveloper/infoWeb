@@ -1,3 +1,6 @@
-# HuntWeb - aplicação em ReactJS para listar repositórios e ver seus detalhes
+# InfoWeb - Aplicação em ReactJS
 
-### Projeto realizado no curso "ReactJS" da rocketseat.
+### Aplicação web em ReactJS, para uma loja de produtos de informática.
+
+## Api utilizada (backend)
+- apiProdutos disponível em https://github.com/TiagoCunhaDeveloper/apiProdutos

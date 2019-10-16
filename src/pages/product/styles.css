@@ -5,6 +5,7 @@
     background: #fff;
     border-radius: 5px;
     border: 1px solid #DDD;
+    margin-bottom: 30px;
 }
 
 .product-info h1 {
@@ -21,23 +22,36 @@
     color: #069;
 }
 
-.product-info .back {
-    height: 42px;
-    border-radius: 5px;
-    border: 2px solid #da552f;
-    background: none;
-    margin-top: 10px;
-    color: #da552f;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
+.back {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s;
+    border-radius: 5px;
+    border:0;
+    background: #fed136;
+    color: #fff;
+    font-size:16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
 }
 
-.product-info .back:hover {
-    background: #da552f;
-    color: #fff;
+.back:hover {
+    opacity: 0.7;
+}
+
+.img {
+    width: 300px;
+    margin-left: 30%;
+}
+
+.delete{
+    margin-top: 10px;
+    background: #ff4b4b;
+}
+.edit{
+    margin-top: 10px;
+    background: #62ff7c;
+    height: 40px;
+    text-decoration: none;
 }
